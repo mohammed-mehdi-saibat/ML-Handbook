@@ -1,156 +1,96 @@
 # 📘 The Complete Machine Learning Handbook
 
-**A structured, practical guide to classical Machine Learning — from fundamentals to real-world ML workflows.**
+**A structured, practical reference for understanding classical Machine Learning — from the fundamentals to end-to-end projects.**
 
 **54 chapters · 52 exercises with solutions · 4 case studies · Python examples · No deep learning**
 
-> **Why I created this:** While learning Machine Learning, I wanted one place where I could revisit not only *what* each algorithm does, but **why it works, when to use it, how to evaluate it, and how to connect it to a complete ML project**. I came up with the idea for this handbook and developed it with AI assistance as a structured, freely accessible learning resource.
+> **The idea behind this project:** While learning Machine Learning, I wanted one place to understand *what models do, why they work, when to choose them, and how to use them in complete ML pipelines*. I came up with the idea for this handbook and developed the learning resources with AI assistance. My goal is to make complex concepts easier to revisit, connect, and practice.
 
-## 📥 Start reading
+## 📥 Download the resources
 
-| Resource | Description | Format |
+| Resource | What's inside | Download |
 |---|---|---|
-| **[Complete Machine Learning Handbook](Machine_Learning_Handbook.pdf)** | The full book, with explanations, equations, examples, and exercises | PDF · 65 pages |
-| **[Machine Learning Quick Reference](Machine_Learning_Quick_Reference.pdf)** | Essential formulas, metrics, model comparisons, and code snippets | PDF · 5 pages |
-| **[Complete Markdown handbook](MASTER_HANDBOOK.md)** | The full content in one searchable, editable Markdown file | Markdown |
-| **[Quick Reference (Markdown)](10_Quick_Reference.md)** | Lightweight quick lookup directly on GitHub | Markdown |
+| **Complete Machine Learning Handbook** | 65-page reference book covering algorithms, mathematics, practical code, evaluation, and workflows | **[⬇️ Download Handbook (PDF)](https://raw.githubusercontent.com/mohammed-mehdi-saibat/ML-Handbook/main/ml_book/Machine_Learning_Handbook.pdf)** |
+| **Machine Learning Quick Reference** | 5-page companion with key formulas, metrics, comparisons, and Python snippets | **[⬇️ Download Quick Reference (PDF)](https://raw.githubusercontent.com/mohammed-mehdi-saibat/ML-Handbook/main/ml_book/Machine_Learning_Quick_Reference.pdf)** |
 
-You can also explore the book **part by part** using the links below. The PDF editions are convenient for offline reading; the Markdown files are easier to navigate on GitHub.
+**Note:** If GitHub shows **“Unable to render code block”** when previewing a PDF, use the **Download** links above. The PDFs can be opened locally in any standard PDF reader.
 
-## 🧭 What you'll learn
+## 🧭 What's covered?
 
-| Part | Topics | Read |
-|---|---|---|
-| **I · Foundations** | ML paradigms, linear algebra, probability, statistics, datasets, learning lifecycle, bias–variance and leakage | [Chapters 1–5](parts/01_Foundations.md) |
-| **II · Data Understanding & Preparation** | NumPy, Pandas, EDA, cleaning, feature engineering, encoding, scaling, imbalance and splitting | [Chapters 6–11](parts/02_EDA_and_Preparation.md) |
-| **III · Regression** | Linear, polynomial, Ridge/Lasso/Elastic Net, KNN, trees, forests, SVR, boosting and regression metrics | [Chapters 12–21](parts/03_Regression.md) |
-| **IV · Classification** | Logistic regression, KNN, Naive Bayes, trees, forests, SVM, boosting, confusion matrix, ROC-AUC, precision, recall and F1 | [Chapters 22–32](parts/04_Classification.md) |
-| **V · Unsupervised Learning** | K-Means, DBSCAN, hierarchical clustering, GMM, PCA, t-SNE, UMAP, anomaly detection and evaluation | [Chapters 33–39](parts/05_Unsupervised.md) |
-| **VI · Professional ML Workflows** | Pipelines, ColumnTransformer, cross-validation, tuning, explainability, Joblib, MLflow, FastAPI, Streamlit and monitoring | [Chapters 40–47](parts/06_Professional_Workflows.md) |
-| **VII · Model Selection & Technical Q&A** | Algorithm comparisons, technical questions, explaining design decisions and code-review mistakes | [Chapters 48–51](parts/07_Soutenance.md) |
+| Part | Topics |
+|---|---|
+| **I. Foundations** | Learning paradigms, essential mathematics, datasets, the ML lifecycle, bias–variance, overfitting and data leakage |
+| **II. Data Understanding & Preparation** | NumPy, Pandas, EDA, missing data, outliers, feature engineering, encoding, scaling, class imbalance and train/test splitting |
+| **III. Regression** | Linear and polynomial regression, regularization, KNN, trees, forests, SVR, boosting and regression metrics |
+| **IV. Classification** | Logistic regression, Naive Bayes, KNN, decision trees, random forests, SVM, boosting and classification metrics |
+| **V. Unsupervised Learning** | K-Means, DBSCAN, hierarchical clustering, Gaussian mixtures, PCA, t-SNE, UMAP and anomaly detection |
+| **VI. Professional ML Workflows** | Scikit-learn pipelines, cross-validation, tuning, explainability, model persistence, MLflow, deployment and monitoring |
+| **VII. Review & Practice** | Model-selection comparisons, technical questions, code-review challenges, exercises and worked solutions |
 
-**Practice:** [52 exercises](exercises/08_Exercises.md) · [Worked solutions](exercises/09_Solutions.md) · [Extra classical ML topics](11_Additional_Classical_ML_Topics.md) · [Official references](12_Official_References.md)
-
-## 🔄 The ML workflow behind the book
+### 📊 The practical ML workflow
 
 ```text
 Define the problem
        ↓
-Understand the data → EDA → Clean and prepare
+Collect and understand data
        ↓
-Split data and prevent leakage
+Explore data (EDA) and design a validation strategy
        ↓
-Build preprocessing + model pipeline
+Split the data appropriately
        ↓
-Baseline → Train → Cross-validate → Tune
+Fit preprocessing on training data only
        ↓
-Evaluate → Interpret → Test
+Build a reproducible pipeline
+       ↓
+Train → Cross-validate → Tune
+       ↓
+Evaluate → Interpret → Final test
        ↓
 Save → Deploy → Monitor
 ```
 
-**Important:** This is a conceptual overview, not an instruction to fit transformations before splitting. Data-dependent preprocessing must be **fit on training data only**, preferably inside a cross-validated pipeline. Grouped and time-dependent datasets also require appropriate split strategies.
+*Preprocessing steps that learn from data should be fitted only on training folds. This prevents data leakage and gives more trustworthy evaluation results.*
 
-## 🧪 Case studies
+## 🧪 Practice included
 
-The handbook includes four practical project blueprints:
+The handbook includes **52 exercises with worked solutions** and **four applied case studies**:
 
-1. **[Price Prediction](case_studies/01_Price_Regression.md)** — regression, preprocessing, model comparison and error analysis.
-2. **[Customer Churn](case_studies/02_Customer_Churn.md)** — classification, class imbalance, metrics and threshold selection.
-3. **[Customer Segmentation](case_studies/03_Customer_Segmentation.md)** — clustering, PCA and cluster evaluation.
-4. **[Anomaly Monitoring](case_studies/04_Anomaly_Monitoring.md)** — unusual-pattern detection and practical monitoring considerations.
+- **Price Prediction:** regression and error analysis.
+- **Customer Churn:** classification, imbalance and threshold selection.
+- **Customer Segmentation:** clustering and dimensionality reduction.
+- **Anomaly Monitoring:** detecting unusual patterns.
 
-The runnable examples use **synthetic or built-in datasets**; you do not need to download private datasets to get started.
+## ⚡ How to use the two PDFs
 
-## 🗂️ Repository structure
+1. **Learn a topic** in the full handbook, starting with the fundamentals and progressing toward model building.
+2. **Reproduce the examples** in Python and explain what each step accomplishes.
+3. **Attempt the exercises** before reading the solutions.
+4. **Use the Quick Reference** whenever you need a formula, metric, model comparison or code reminder.
+
+## 📁 Repository structure
 
 ```text
-complete-machine-learning-handbook/
+ML-Handbook/
 ├── README.md
-├── Machine_Learning_Handbook.pdf
-├── Machine_Learning_Quick_Reference.pdf
-├── MASTER_HANDBOOK.md
-├── 10_Quick_Reference.md
-├── 11_Additional_Classical_ML_Topics.md
-├── 12_Official_References.md
-├── STUDY_PROGRESS.md
-├── requirements.txt
-├── parts/            # Seven Markdown sections
-├── exercises/        # Exercises and worked solutions
-├── case_studies/     # Four end-to-end project blueprints
-└── code/             # Runnable Python demonstrations
+└── ml_book/
+    ├── Machine_Learning_Handbook.pdf
+    └── Machine_Learning_Quick_Reference.pdf
 ```
 
-## 💻 Run the Python examples
+## 🛠️ Tools and libraries discussed
 
-**Requirements:** Python and a terminal. The examples are written around NumPy, Pandas and scikit-learn; some additional demonstrations use optional, heavier packages.
-
-### Windows (PowerShell)
-
-From the repository root:
-
-```powershell
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-
-python code\regression_pipeline.py
-python code\classification_pipeline.py
-python code\clustering_demo.py
-```
-
-If PowerShell blocks activation, run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned` and activate again.
-
-### macOS / Linux
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-
-python code/regression_pipeline.py
-python code/classification_pipeline.py
-python code/clustering_demo.py
-```
-
-Additional examples:
-
-| Script | Demonstrates |
-|---|---|
-| [`model_gallery.py`](code/model_gallery.py) | Comparing several supervised model families |
-| [`mlflow_demo.py`](code/mlflow_demo.py) | Basic experiment tracking with MLflow |
-| [`api_example.py`](code/api_example.py) | Illustrative FastAPI endpoint and request validation |
-| [`streamlit_example.py`](code/streamlit_example.py) | Educational interactive Streamlit application |
-
-See [the code guide](code/README.md) for commands and important caveats. Installing all requirements may take time; optional packages are only needed for their respective examples. The FastAPI example is **not a production prediction service**.
-
-## 📖 Suggested learning path
-
-1. Read **Foundations** and **Data Preparation** first; practice NumPy, Pandas and EDA.
-2. Learn **Regression**, then **Classification**, including their evaluation metrics.
-3. Move to **Clustering**, dimensionality reduction and anomaly detection.
-4. Practice complete, leakage-safe **ML pipelines** and model evaluation.
-5. Try the [exercises](exercises/08_Exercises.md) **before** checking the [solutions](exercises/09_Solutions.md).
-6. Use the [Quick Reference](Machine_Learning_Quick_Reference.pdf) whenever you need a fast refresher.
-
-Track your progress with [`STUDY_PROGRESS.md`](STUDY_PROGRESS.md).
-
-## 🛠️ Technologies covered
-
-`Python` · `NumPy` · `Pandas` · `Matplotlib` · `Seaborn` · `scikit-learn` · `XGBoost` · `LightGBM` · `CatBoost` · `MLflow` · `Joblib` · `FastAPI` · `Streamlit`
+`Python` · `NumPy` · `Pandas` · `Matplotlib` · `Seaborn` · `scikit-learn` · `XGBoost` · `LightGBM` · `CatBoost` · `Joblib` · `MLflow` · `FastAPI` · `Streamlit`
 
 ## 💬 Feedback and contributions
 
-Corrections, improvements, and suggestions are welcome. If you spot an outdated API, unclear explanation, or mathematical mistake, please **open an issue** and describe the relevant chapter or example. Pull requests are also welcome for review.
+Corrections, suggestions, and improvements are welcome. If you notice a mistake, an unclear explanation, or an outdated API, please [open an issue](https://github.com/mohammed-mehdi-saibat/ML-Handbook/issues).
 
 ## 📝 Notes and credits
 
-- **Scope:** Widely used **classical ML** algorithms and workflows. Deep learning is intentionally excluded. Reinforcement learning is introduced at a conceptual level, not as a full implementation track.
-- **Creation:** This project began as my idea to build an organized Machine Learning reference. AI tools assisted with drafting, structure, and examples. Content should still be reviewed critically and checked against [official documentation](12_Official_References.md).
-- **Educational use:** Illustrative examples are not automatically suitable for high-stakes or production systems. Validate datasets, fairness, privacy, dependencies and deployed behavior independently.
-- **License:** No license has been selected for this repository yet.
+- **Scope:** This is a reference to *classical* Machine Learning. Deep learning is intentionally excluded; reinforcement learning is introduced conceptually.
+- **Creation:** The concept and learning goals came from me. AI tools assisted with drafting, organizing, and developing the material. Readers are encouraged to verify examples and consult official documentation.
+- **Educational use:** Examples are for learning and should be validated before real-world deployment.
+- **License:** No open-source license is declared unless a `LICENSE` file is added to this repository.
 
 ---
 
